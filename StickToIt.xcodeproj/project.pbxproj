@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491B10CB1B5B484C00D0773E /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B10CA1B5B484C00D0773E /* EventTableViewController.swift */; };
 		491D79471B54F79B00CE7DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D79461B54F79B00CE7DF5 /* AppDelegate.swift */; };
 		491D794C1B54F79B00CE7DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491D794A1B54F79B00CE7DF5 /* Main.storyboard */; };
 		491D794E1B54F79B00CE7DF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491D794D1B54F79B00CE7DF5 /* Images.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		491B10CA1B5B484C00D0773E /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		491D79411B54F79B00CE7DF5 /* StickToIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickToIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		491D79451B54F79B00CE7DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		491D79461B54F79B00CE7DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		491B10CC1B5B4A2F00D0773E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		491B10CD1B5B4A3500D0773E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				49F9D5691B58A8890078458D /* AddEventViewController.swift */,
+				491D794A1B54F79B00CE7DF5 /* Main.storyboard */,
+				491B10CA1B5B484C00D0773E /* EventTableViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		491D79381B54F79B00CE7DF5 = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +96,9 @@
 		491D79431B54F79B00CE7DF5 /* StickToIt */ = {
 			isa = PBXGroup;
 			children = (
-				49F9D5691B58A8890078458D /* AddEventViewController.swift */,
-				491D79461B54F79B00CE7DF5 /* AppDelegate.swift */,
-				491D794A1B54F79B00CE7DF5 /* Main.storyboard */,
+				491B10CD1B5B4A3500D0773E /* View */,
+				491B10CC1B5B4A2F00D0773E /* Model */,
 				491D794D1B54F79B00CE7DF5 /* Images.xcassets */,
-				491D794F1B54F79B00CE7DF5 /* LaunchScreen.xib */,
 				491D79441B54F79B00CE7DF5 /* Supporting Files */,
 			);
 			path = StickToIt;
@@ -90,6 +107,8 @@
 		491D79441B54F79B00CE7DF5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				491D794F1B54F79B00CE7DF5 /* LaunchScreen.xib */,
+				491D79461B54F79B00CE7DF5 /* AppDelegate.swift */,
 				491D79451B54F79B00CE7DF5 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -213,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				491D79471B54F79B00CE7DF5 /* AppDelegate.swift in Sources */,
+				491B10CB1B5B484C00D0773E /* EventTableViewController.swift in Sources */,
 				49F9D56A1B58A8890078458D /* AddEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
