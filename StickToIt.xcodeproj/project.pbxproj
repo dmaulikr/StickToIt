@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		491D79471B54F79B00CE7DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D79461B54F79B00CE7DF5 /* AppDelegate.swift */; };
-		491D79491B54F79B00CE7DF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D79481B54F79B00CE7DF5 /* ViewController.swift */; };
 		491D794C1B54F79B00CE7DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491D794A1B54F79B00CE7DF5 /* Main.storyboard */; };
 		491D794E1B54F79B00CE7DF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491D794D1B54F79B00CE7DF5 /* Images.xcassets */; };
 		491D79511B54F79B00CE7DF5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491D794F1B54F79B00CE7DF5 /* LaunchScreen.xib */; };
 		491D795D1B54F79B00CE7DF5 /* StickToItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D795C1B54F79B00CE7DF5 /* StickToItTests.swift */; };
+		49F9D56A1B58A8890078458D /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9D5691B58A8890078458D /* AddEventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		491D79411B54F79B00CE7DF5 /* StickToIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickToIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		491D79451B54F79B00CE7DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		491D79461B54F79B00CE7DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		491D79481B54F79B00CE7DF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		491D794B1B54F79B00CE7DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		491D794D1B54F79B00CE7DF5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		491D79501B54F79B00CE7DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		491D79561B54F79B00CE7DF5 /* StickToItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StickToItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		491D795B1B54F79B00CE7DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		491D795C1B54F79B00CE7DF5 /* StickToItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickToItTests.swift; sourceTree = "<group>"; };
+		49F9D5691B58A8890078458D /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +77,8 @@
 		491D79431B54F79B00CE7DF5 /* StickToIt */ = {
 			isa = PBXGroup;
 			children = (
+				49F9D5691B58A8890078458D /* AddEventViewController.swift */,
 				491D79461B54F79B00CE7DF5 /* AppDelegate.swift */,
-				491D79481B54F79B00CE7DF5 /* ViewController.swift */,
 				491D794A1B54F79B00CE7DF5 /* Main.storyboard */,
 				491D794D1B54F79B00CE7DF5 /* Images.xcassets */,
 				491D794F1B54F79B00CE7DF5 /* LaunchScreen.xib */,
@@ -212,8 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				491D79491B54F79B00CE7DF5 /* ViewController.swift in Sources */,
 				491D79471B54F79B00CE7DF5 /* AppDelegate.swift in Sources */,
+				49F9D56A1B58A8890078458D /* AddEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +409,7 @@
 				491D79621B54F79B00CE7DF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		491D79631B54F79B00CE7DF5 /* Build configuration list for PBXNativeTarget "StickToItTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +418,7 @@
 				491D79651B54F79B00CE7DF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
