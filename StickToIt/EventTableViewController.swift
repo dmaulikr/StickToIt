@@ -46,11 +46,25 @@ class EventTableViewController: UITableViewController {
         let cellData = eventStatisticsList[indexPath.row]
         
         cell.eventName.text = cellData.event.name
-        cell.times.text = "0"
-//        cell.alertImage
-//        cell.checkedImage
+        cell.times.text = String(cellData.times)
+        
+        if cellData.event.needAlert {
+            cell.alertImage.hidden = false
+        }
+        
+        if cellData.checkedThisTime {
+            cell.checkedImage.hidden = false
+        }
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cellData = eventStatisticsList[indexPath.row]
+        cellData.times++
+        cellData.checkedThisTime = true
+        
+        self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
     }
 
     /*

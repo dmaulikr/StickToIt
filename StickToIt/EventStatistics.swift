@@ -13,6 +13,7 @@ class EventStatistics {
     var event:Event
     var startDate:NSDate?
     var times:uint = 0
+    var checkedThisTime = false
     
     var duration:Int{
         get{
