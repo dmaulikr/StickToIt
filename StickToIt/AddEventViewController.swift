@@ -16,6 +16,9 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource, UIPicker
 
     @IBOutlet weak var cyclePicker: UIPickerView!
 
+    @IBOutlet weak var startDatePicker: UIDatePicker!
+    @IBOutlet weak var endDatePicker: UIDatePicker!
+    @IBOutlet weak var alertSwitch: UISwitch!
     
     var cycleType = ["Day", "Week"]
     
@@ -65,14 +68,31 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBAction func needAlertSwitchChangeAction(sender: UISwitch) {
         println(sender.on.description)
     }
+    
+    
+    @IBAction func AddEvent(sender: UIBarButtonItem) {
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "addEvent" {
+            let eventTableViewController = segue.destinationViewController as! EventTableViewController
+            var event = Event()
+            event.name = name.text
+            event.description = eventDescription.text
+            event.startTime = startDatePicker.date
+            event.endTime = endDatePicker.date
+            event.needAlert = alertSwitch.on
+            
+            var eventStatistics = EventStatistics(event:event, startDate:NSDate())
+            eventTableViewController.eventStatistics = eventStatistics
+        }
+    }
+
     /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        */
 
 }

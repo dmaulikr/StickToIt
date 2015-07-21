@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		491B10CB1B5B484C00D0773E /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B10CA1B5B484C00D0773E /* EventTableViewController.swift */; };
+		491B10CF1B5B4BC700D0773E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B10CE1B5B4BC700D0773E /* Event.swift */; };
+		491B10D11B5B4E4000D0773E /* EventStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B10D01B5B4E4000D0773E /* EventStatistics.swift */; };
+		491B10D31B5B5A3200D0773E /* EventStatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B10D21B5B5A3200D0773E /* EventStatisticsTableViewCell.swift */; };
 		491D79471B54F79B00CE7DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D79461B54F79B00CE7DF5 /* AppDelegate.swift */; };
 		491D794C1B54F79B00CE7DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491D794A1B54F79B00CE7DF5 /* Main.storyboard */; };
 		491D794E1B54F79B00CE7DF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491D794D1B54F79B00CE7DF5 /* Images.xcassets */; };
@@ -28,6 +31,9 @@
 
 /* Begin PBXFileReference section */
 		491B10CA1B5B484C00D0773E /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		491B10CE1B5B4BC700D0773E /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		491B10D01B5B4E4000D0773E /* EventStatistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStatistics.swift; sourceTree = "<group>"; };
+		491B10D21B5B5A3200D0773E /* EventStatisticsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStatisticsTableViewCell.swift; sourceTree = "<group>"; };
 		491D79411B54F79B00CE7DF5 /* StickToIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickToIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		491D79451B54F79B00CE7DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		491D79461B54F79B00CE7DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +67,8 @@
 		491B10CC1B5B4A2F00D0773E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				491B10CE1B5B4BC700D0773E /* Event.swift */,
+				491B10D01B5B4E4000D0773E /* EventStatistics.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -71,6 +79,7 @@
 				49F9D5691B58A8890078458D /* AddEventViewController.swift */,
 				491D794A1B54F79B00CE7DF5 /* Main.storyboard */,
 				491B10CA1B5B484C00D0773E /* EventTableViewController.swift */,
+				491B10D21B5B5A3200D0773E /* EventStatisticsTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -231,7 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491B10CF1B5B4BC700D0773E /* Event.swift in Sources */,
+				491B10D31B5B5A3200D0773E /* EventStatisticsTableViewCell.swift in Sources */,
 				491D79471B54F79B00CE7DF5 /* AppDelegate.swift in Sources */,
+				491B10D11B5B4E4000D0773E /* EventStatistics.swift in Sources */,
 				491B10CB1B5B484C00D0773E /* EventTableViewController.swift in Sources */,
 				49F9D56A1B58A8890078458D /* AddEventViewController.swift in Sources */,
 			);
