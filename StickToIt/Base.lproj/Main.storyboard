@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Av0-K1-fce">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--创建事件-->
@@ -16,43 +17,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdB-TG-ZeQ">
-                                <rect key="frame" x="58" y="76" width="34" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdB-TG-ZeQ">
+                                <rect key="frame" x="58" y="49" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="描述" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DC8-1k-9F0">
-                                <rect key="frame" x="58" y="114" width="34" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="描述" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DC8-1k-9F0">
+                                <rect key="frame" x="58" y="86" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="周期" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9Y-f9-lJn">
-                                <rect key="frame" x="58" y="205" width="34" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="周期" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9Y-f9-lJn">
+                                <rect key="frame" x="58" y="178" width="34" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="开始时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dB-ez-4Y0">
-                                <rect key="frame" x="24" y="334" width="68" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开始时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dB-ez-4Y0">
+                                <rect key="frame" x="30" y="290.5" width="68" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="结束时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peb-B2-E0r">
-                                <rect key="frame" x="24" y="423" width="68" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="结束时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peb-B2-E0r">
+                                <rect key="frame" x="24" y="407" width="68" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JmG-JP-17k">
-                                <rect key="frame" x="100" y="72" width="242" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JmG-JP-17k">
+                                <rect key="frame" x="100" y="45" width="242" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QFY-q6-Z18">
-                                <rect key="frame" x="100" y="334" width="242" height="81"/>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QFY-q6-Z18">
+                                <rect key="frame" x="100" y="281" width="242" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="AD0-kk-9bz"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="242" id="UKj-u2-kNr"/>
+                                    <constraint firstAttribute="width" constant="242" id="ZEl-i4-gkm"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="73" id="heH-r4-dL4"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="73" id="nBr-dj-3Yo"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="242" id="nH4-KN-XoQ"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="458553649.38570702">
                                     <!--2015-07-14 08:00:49 +0000-->
                                 </date>
@@ -60,8 +69,43 @@
                                     <action selector="startDatePickerAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="IkV-WQ-EX7"/>
                                 </connections>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EmN-Ba-McJ">
-                                <rect key="frame" x="100" y="423" width="242" height="79"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="闹钟 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fg-Jn-FhQ">
+                                <rect key="frame" x="53" y="503.5" width="34" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sya-hf-jAB">
+                                <rect key="frame" x="95" y="498" width="51" height="31"/>
+                                <connections>
+                                    <action selector="needAlertSwitchChangeAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="mTx-8T-XDm"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如果选择，则开始和结束都会有闹钟提醒" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkb-Kl-LMD">
+                                <rect key="frame" x="95" y="537" width="264" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.49803921580314636" green="0.49803921580314636" blue="0.49803921580314636" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="TLD-bK-R6o">
+                                <rect key="frame" x="100" y="87" width="242" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="56T-Pw-HEw"/>
+                                    <constraint firstAttribute="height" constant="75" id="oT6-ZZ-HfI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dg-TA-57D">
+                                <rect key="frame" x="100" y="87" width="100" height="54"/>
+                            </pickerView>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EmN-Ba-McJ">
+                                <rect key="frame" x="100" y="385" width="242" height="42.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="Y6e-LD-7Ml"/>
+                                    <constraint firstAttribute="height" constant="42.5" id="ckN-5J-Aea"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="458553649.38570702">
                                     <!--2015-07-14 08:00:49 +0000-->
                                 </date>
@@ -69,36 +113,55 @@
                                     <action selector="endDatePickerAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="ivh-Jo-1b7"/>
                                 </connections>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="闹钟 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fg-Jn-FhQ">
-                                <rect key="frame" x="58" y="520" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sya-hf-jAB">
-                                <rect key="frame" x="100" y="515" width="51" height="31"/>
-                                <connections>
-                                    <action selector="needAlertSwitchChangeAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="mTx-8T-XDm"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="如果选择，则开始和结束都会有闹钟提醒" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkb-Kl-LMD">
-                                <rect key="frame" x="100" y="554" width="264" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.49803921580314636" green="0.49803921580314636" blue="0.49803921580314636" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="TLD-bK-R6o">
-                                <rect key="frame" x="100" y="114" width="242" height="75"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8dg-TA-57D">
-                                <rect key="frame" x="100" y="184" width="107" height="63"/>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QFY-q6-Z18" firstAttribute="top" secondItem="1dB-ez-4Y0" secondAttribute="top" constant="-10" id="00D-xb-Kep"/>
+                            <constraint firstItem="d9Y-f9-lJn" firstAttribute="top" secondItem="DC8-1k-9F0" secondAttribute="bottom" constant="71" id="1CF-75-vGo"/>
+                            <constraint firstItem="DC8-1k-9F0" firstAttribute="leading" secondItem="CdB-TG-ZeQ" secondAttribute="leading" id="1ms-Gd-KAs"/>
+                            <constraint firstItem="DC8-1k-9F0" firstAttribute="top" secondItem="TLD-bK-R6o" secondAttribute="top" constant="-1" id="45h-Oa-7hN"/>
+                            <constraint firstItem="TLD-bK-R6o" firstAttribute="top" secondItem="JmG-JP-17k" secondAttribute="bottom" constant="12" id="4W6-y3-snM"/>
+                            <constraint firstItem="CdB-TG-ZeQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="42" id="6x2-AL-FLO"/>
+                            <constraint firstItem="wkb-Kl-LMD" firstAttribute="top" secondItem="sya-hf-jAB" secondAttribute="bottom" constant="8" id="78H-Fp-25m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QFY-q6-Z18" secondAttribute="trailing" constant="17" id="7rC-9k-Ebc"/>
+                            <constraint firstItem="DC8-1k-9F0" firstAttribute="leading" secondItem="d9Y-f9-lJn" secondAttribute="leading" id="82o-qF-ZUb"/>
+                            <constraint firstItem="CdB-TG-ZeQ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="29" id="9gm-HT-ymr"/>
+                            <constraint firstItem="peb-B2-E0r" firstAttribute="top" secondItem="1dB-ez-4Y0" secondAttribute="bottom" constant="96" id="DF7-a8-pl8"/>
+                            <constraint firstItem="QFY-q6-Z18" firstAttribute="top" secondItem="1dB-ez-4Y0" secondAttribute="top" constant="-10" id="E9b-ea-LXB"/>
+                            <constraint firstItem="QFY-q6-Z18" firstAttribute="leading" secondItem="1dB-ez-4Y0" secondAttribute="trailing" constant="2" id="FNj-wj-Jcm"/>
+                            <constraint firstItem="EmN-Ba-McJ" firstAttribute="leading" secondItem="peb-B2-E0r" secondAttribute="trailing" constant="8" id="FmG-ij-CTj"/>
+                            <constraint firstItem="1dB-ez-4Y0" firstAttribute="trailing" secondItem="peb-B2-E0r" secondAttribute="trailing" constant="6" id="I27-to-VTb"/>
+                            <constraint firstItem="d9Y-f9-lJn" firstAttribute="top" secondItem="8dg-TA-57D" secondAttribute="top" constant="91" id="J3R-Qb-rdY"/>
+                            <constraint firstItem="5fg-Jn-FhQ" firstAttribute="top" secondItem="peb-B2-E0r" secondAttribute="bottom" constant="76" id="JqA-i9-pdY"/>
+                            <constraint firstItem="TLD-bK-R6o" firstAttribute="leading" secondItem="EmN-Ba-McJ" secondAttribute="leading" id="Kor-0y-CI8"/>
+                            <constraint firstItem="wkb-Kl-LMD" firstAttribute="leading" secondItem="sya-hf-jAB" secondAttribute="leading" id="LGU-Ff-94M"/>
+                            <constraint firstItem="JmG-JP-17k" firstAttribute="top" secondItem="CdB-TG-ZeQ" secondAttribute="top" constant="-4" id="Mz9-Af-2Kd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sya-hf-jAB" secondAttribute="trailing" constant="215" id="N3P-tL-jMa"/>
+                            <constraint firstItem="8dg-TA-57D" firstAttribute="leading" secondItem="d9Y-f9-lJn" secondAttribute="trailing" constant="8" id="NSG-Kg-Z5L"/>
+                            <constraint firstItem="1dB-ez-4Y0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="14" id="PqI-B0-llZ"/>
+                            <constraint firstItem="1dB-ez-4Y0" firstAttribute="top" secondItem="d9Y-f9-lJn" secondAttribute="bottom" constant="92" id="Ral-Jw-P8A"/>
+                            <constraint firstItem="TLD-bK-R6o" firstAttribute="leading" secondItem="wkb-Kl-LMD" secondAttribute="leading" constant="5" id="SU8-mS-lHt"/>
+                            <constraint firstItem="DC8-1k-9F0" firstAttribute="top" secondItem="CdB-TG-ZeQ" secondAttribute="bottom" constant="16" id="SyX-ck-4eU"/>
+                            <constraint firstItem="QFY-q6-Z18" firstAttribute="leading" secondItem="1dB-ez-4Y0" secondAttribute="trailing" constant="2" id="Vu2-BG-je6"/>
+                            <constraint firstItem="5fg-Jn-FhQ" firstAttribute="top" secondItem="sya-hf-jAB" secondAttribute="top" constant="5" id="XIq-fe-mpg"/>
+                            <constraint firstItem="TLD-bK-R6o" firstAttribute="leading" secondItem="DC8-1k-9F0" secondAttribute="trailing" constant="8" id="Xlj-5A-UwB"/>
+                            <constraint firstItem="TLD-bK-R6o" firstAttribute="trailing" secondItem="QFY-q6-Z18" secondAttribute="trailing" id="aeY-Nb-HPg"/>
+                            <constraint firstItem="JmG-JP-17k" firstAttribute="leading" secondItem="CdB-TG-ZeQ" secondAttribute="trailing" constant="8" id="bFO-Do-TtZ"/>
+                            <constraint firstItem="5fg-Jn-FhQ" firstAttribute="leading" secondItem="peb-B2-E0r" secondAttribute="leading" constant="29" id="cpF-iD-uhq"/>
+                            <constraint firstItem="TLD-bK-R6o" firstAttribute="leading" secondItem="QFY-q6-Z18" secondAttribute="leading" id="e7a-hb-0El"/>
+                            <constraint firstItem="8dg-TA-57D" firstAttribute="top" secondItem="TLD-bK-R6o" secondAttribute="bottom" constant="-75" id="iqF-hB-gH2"/>
+                            <constraint firstItem="EmN-Ba-McJ" firstAttribute="top" secondItem="peb-B2-E0r" secondAttribute="top" constant="-22" id="iv5-ju-Ghl"/>
+                            <constraint firstItem="DC8-1k-9F0" firstAttribute="width" secondItem="d9Y-f9-lJn" secondAttribute="width" id="lkN-a1-1Tn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JmG-JP-17k" secondAttribute="trailing" constant="17" id="oRZ-y0-2Th"/>
+                            <constraint firstItem="TLD-bK-R6o" firstAttribute="leading" secondItem="sya-hf-jAB" secondAttribute="leading" constant="5" id="q5u-q5-slg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QFY-q6-Z18" secondAttribute="trailing" constant="17" id="sP3-OK-Xhw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EmN-Ba-McJ" secondAttribute="trailing" constant="17" id="t6E-ii-rdj"/>
+                            <constraint firstItem="d9Y-f9-lJn" firstAttribute="trailing" secondItem="1dB-ez-4Y0" secondAttribute="trailing" constant="-6" id="tb9-oW-at3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8dg-TA-57D" secondAttribute="trailing" constant="159" id="ub2-b7-2rL"/>
+                            <constraint firstItem="TLD-bK-R6o" firstAttribute="trailing" secondItem="EmN-Ba-McJ" secondAttribute="trailing" id="x4B-KI-9pg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wkb-Kl-LMD" secondAttribute="trailing" id="xgG-J7-qge"/>
+                            <constraint firstItem="sya-hf-jAB" firstAttribute="leading" secondItem="5fg-Jn-FhQ" secondAttribute="trailing" constant="8" id="zLW-4f-GYB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="创建事件" id="VQT-DJ-TFU">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="rbn-ZP-Lk0">

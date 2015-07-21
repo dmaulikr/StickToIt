@@ -20,7 +20,7 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBOutlet weak var endDatePicker: UIDatePicker!
     @IBOutlet weak var alertSwitch: UISwitch!
     
-    var cycleType = ["Day", "Week"]
+    var cycleType = ["天", "周"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,17 +45,6 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource, UIPicker
         return cycleType[row]
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
-    {
-        if(row == 0)
-        {
-            self.view.backgroundColor = UIColor.whiteColor();
-        }
-        else if(row == 1)
-        {
-            self.view.backgroundColor = UIColor.redColor();
-        }
-    }
     
     @IBAction func startDatePickerAction(sender: UIDatePicker) {
 
