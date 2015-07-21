@@ -44,25 +44,7 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource, UIPicker
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return cycleType[row]
     }
-    
-    
-    @IBAction func startDatePickerAction(sender: UIDatePicker) {
-
-    }
-    
-
-    @IBAction func endDatePickerAction(sender: UIDatePicker) {
-    }
-
-    @IBAction func needAlertSwitchChangeAction(sender: UISwitch) {
-        println(sender.on.description)
-    }
-    
-    
-    @IBAction func AddEvent(sender: UIBarButtonItem) {
         
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "addEvent" {
             let eventTableViewController = segue.destinationViewController as! EventTableViewController

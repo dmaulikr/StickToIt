@@ -172,7 +172,7 @@
                                     <color key="titleShadowColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="UE9-mf-bEk" kind="show" identifier="addEvent" id="HOw-Vh-dA2"/>
+                                    <segue destination="n0X-8u-Hdg" kind="unwind" identifier="addEvent" unwindAction="unwindFromAddEvent:" id="ywR-3P-QB0"/>
                                 </connections>
                             </button>
                             <connections>
@@ -191,6 +191,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <exit id="n0X-8u-Hdg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1876.5" y="401.5"/>
         </scene>
@@ -284,7 +285,4 @@
         <image name="mark.icon.png" width="130" height="130"/>
         <image name="timer_icon.png" width="122" height="122"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="HOw-Vh-dA2"/>
-    </inferredMetricsTieBreakers>
 </document>

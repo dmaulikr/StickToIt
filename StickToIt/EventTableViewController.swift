@@ -16,10 +16,7 @@ class EventTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if eventStatistics != nil {
-            eventStatisticsList.append(eventStatistics!)
-        }
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -65,6 +62,13 @@ class EventTableViewController: UITableViewController {
         cellData.checkedThisTime = true
         
         self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+    }
+    
+    @IBAction func unwindFromAddEvent(sender: UIStoryboardSegue){
+        if eventStatistics != nil {
+            eventStatisticsList.append(eventStatistics!)
+        }
+        tableView.reloadData()
     }
 
     /*
