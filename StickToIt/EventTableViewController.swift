@@ -52,8 +52,24 @@ class EventTableViewController: UITableViewController {
         if cellData.checkedThisTime {
             cell.checkedImage.hidden = false
         }
-
+        
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+       performSegueWithIdentifier("showDetail", sender: eventStatisticsList[indexPath.row])
+    }
+    
+    // MARK: - Navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "showDetail")
+        {
+            let item = sender as! EventStatistics
+            
+            let eventDetailViewController = segue.destinationViewController as! EventDetailViewController
+            eventDetailViewController.eventStatistics = item
+        }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -106,14 +122,6 @@ class EventTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

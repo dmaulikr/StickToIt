@@ -18,6 +18,7 @@
 		491D795D1B54F79B00CE7DF5 /* StickToItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D795C1B54F79B00CE7DF5 /* StickToItTests.swift */; };
 		495B61041B5E26D1004D7654 /* mark.icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 495B61031B5E26D1004D7654 /* mark.icon.png */; };
 		495B61081B5E273E004D7654 /* timer_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 495B61071B5E273E004D7654 /* timer_icon.png */; };
+		49D60BB51B609BB50041AA22 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D60BB41B609BB50041AA22 /* EventDetailViewController.swift */; };
 		49F9D56A1B58A8890078458D /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9D5691B58A8890078458D /* AddEventViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		491D795C1B54F79B00CE7DF5 /* StickToItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickToItTests.swift; sourceTree = "<group>"; };
 		495B61031B5E26D1004D7654 /* mark.icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mark.icon.png; sourceTree = "<group>"; };
 		495B61071B5E273E004D7654 /* timer_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timer_icon.png; sourceTree = "<group>"; };
+		49D60BB41B609BB50041AA22 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		49F9D5691B58A8890078458D /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				491D794A1B54F79B00CE7DF5 /* Main.storyboard */,
 				491B10CA1B5B484C00D0773E /* EventTableViewController.swift */,
 				491B10D21B5B5A3200D0773E /* EventStatisticsTableViewCell.swift */,
+				49D60BB41B609BB50041AA22 /* EventDetailViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				491D79471B54F79B00CE7DF5 /* AppDelegate.swift in Sources */,
 				491B10D11B5B4E4000D0773E /* EventStatistics.swift in Sources */,
 				491B10CB1B5B484C00D0773E /* EventTableViewController.swift in Sources */,
+				49D60BB51B609BB50041AA22 /* EventDetailViewController.swift in Sources */,
 				49F9D56A1B58A8890078458D /* AddEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
