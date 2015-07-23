@@ -12,10 +12,37 @@ class EventDetailViewController: UIViewController {
 
     var eventStatistics:EventStatistics?
     
+    @IBOutlet weak var eventDescription: UITextView!
+    @IBOutlet weak var stickDays: UILabel!
+    @IBOutlet weak var durationDays: UILabel!
+    @IBOutlet weak var cycleType: UILabel!
+    @IBOutlet weak var startTime: UILabel!
+    @IBOutlet weak var endTime: UILabel!
+    @IBOutlet weak var hasAlert: UISwitch!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = eventStatistics?.event.name
+        
         // Do any additional setup after loading the view.
+        showEventStatisticsDetail()
+    }
+    
+    func showEventStatisticsDetail(){
+        if eventStatistics != nil{
+            title = eventStatistics!.event.name
+            eventDescription.text = eventStatistics!.event.description
+            stickDays.text = String(eventStatistics!.times)
+            durationDays.text = String(eventStatistics!.duration)
+            cycleType.text = "天"
+            
+            let dayTimeFomatter = NSDateFormatter()
+            dayTimeFomatter.dateFormat = "h:m"
+            startTime.text = dayTimeFomatter.stringFromDate(eventStatistics!.event.startTime!)
+            endTime.text = dayTimeFomatter.stringFromDate(eventStatistics!.event.endTime!)
+            hasAlert.on = eventStatistics!.event.needAlert
+        }
+
     }
 
 
