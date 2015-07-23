@@ -29,18 +29,18 @@ class EventDetailViewController: UIViewController {
     }
     
     func showEventStatisticsDetail(){
-        if eventStatistics != nil{
-            title = eventStatistics!.event.name
-            eventDescription.text = eventStatistics!.event.description
-            stickDays.text = String(eventStatistics!.times)
-            durationDays.text = String(eventStatistics!.duration)
+        if let unwrappedEventStatistics = eventStatistics {
+            title = unwrappedEventStatistics.event.name
+            eventDescription.text = unwrappedEventStatistics.event.description
+            stickDays.text = String(unwrappedEventStatistics.times)
+            durationDays.text = String(unwrappedEventStatistics.duration)
             cycleType.text = "天"
             
             let dayTimeFomatter = NSDateFormatter()
             dayTimeFomatter.dateFormat = "h:m"
-            startTime.text = dayTimeFomatter.stringFromDate(eventStatistics!.event.startTime!)
-            endTime.text = dayTimeFomatter.stringFromDate(eventStatistics!.event.endTime!)
-            hasAlert.on = eventStatistics!.event.needAlert
+            startTime.text = dayTimeFomatter.stringFromDate(unwrappedEventStatistics.event.startTime!)
+            endTime.text = dayTimeFomatter.stringFromDate(unwrappedEventStatistics.event.endTime!)
+            hasAlert.on = unwrappedEventStatistics.event.needAlert
         }
 
     }

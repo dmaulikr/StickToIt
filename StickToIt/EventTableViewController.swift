@@ -12,10 +12,11 @@ class EventTableViewController: UITableViewController {
 
     var eventStatisticsList = [EventStatistics]()
     var eventStatistics:EventStatistics?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    var str:String
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -81,8 +82,8 @@ class EventTableViewController: UITableViewController {
     }
     
     @IBAction func unwindFromAddEvent(sender: UIStoryboardSegue){
-        if eventStatistics != nil {
-            eventStatisticsList.append(eventStatistics!)
+        if let unwrappedEventStatistics = eventStatistics {
+            eventStatisticsList.append(unwrappedEventStatistics)
         }
         tableView.reloadData()
     }
