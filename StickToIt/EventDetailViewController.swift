@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventDetailViewController: UIViewController {
+class EventDetailViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
     var eventStatistics:EventStatistics?
     
@@ -19,13 +19,23 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var endTime: UILabel!
     @IBOutlet weak var hasAlert: UISwitch!
-    
+
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         showEventStatisticsDetail()
+        
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+//        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
+//        layout.itemSize = CGSize(width: 90, height: 90)
+        if let unwrappedCollectionView = collectionView{
+            unwrappedCollectionView.dataSource = self
+            unwrappedCollectionView.delegate = self
+            unwrappedCollectionView.backgroundColor = UIColor.whiteColor()
+        }
     }
     
     func showEventStatisticsDetail(){
@@ -43,6 +53,20 @@ class EventDetailViewController: UIViewController {
             hasAlert.on = unwrappedEventStatistics.event.needAlert
         }
 
+    }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ImageCell", forIndexPath: indexPath) as! UICollectionViewCell
+        let uiImage = cell.viewWithTag(100) as! UIImageView
+        return cell
     }
 
 
