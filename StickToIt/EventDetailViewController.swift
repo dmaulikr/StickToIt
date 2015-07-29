@@ -10,7 +10,7 @@ import UIKit
 
 class EventDetailViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
-    var eventStatistics:EventStatistics?
+    var eventStatistics:EventStatistics!
     
     @IBOutlet weak var eventDescription: UITextView!
     @IBOutlet weak var stickDays: UILabel!
@@ -28,31 +28,23 @@ class EventDetailViewController: UIViewController, UICollectionViewDelegateFlowL
         // Do any additional setup after loading the view.
         showEventStatisticsDetail()
         
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-//        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-//        layout.itemSize = CGSize(width: 90, height: 90)
-        if let unwrappedCollectionView = collectionView{
-            unwrappedCollectionView.dataSource = self
-            unwrappedCollectionView.delegate = self
-            unwrappedCollectionView.backgroundColor = UIColor.whiteColor()
-        }
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.backgroundColor = UIColor.whiteColor()
     }
     
     func showEventStatisticsDetail(){
-        if let unwrappedEventStatistics = eventStatistics {
-            title = unwrappedEventStatistics.event.name
-            eventDescription.text = unwrappedEventStatistics.event.description
-            stickDays.text = String(unwrappedEventStatistics.times)
-            durationDays.text = String(unwrappedEventStatistics.duration)
-            cycleType.text = "天"
-            
-            let dayTimeFomatter = NSDateFormatter()
-            dayTimeFomatter.dateFormat = "h:m"
-            startTime.text = dayTimeFomatter.stringFromDate(unwrappedEventStatistics.event.startTime!)
-            endTime.text = dayTimeFomatter.stringFromDate(unwrappedEventStatistics.event.endTime!)
-            hasAlert.on = unwrappedEventStatistics.event.needAlert
-        }
-
+        title = eventStatistics.event.name
+        eventDescription.text = eventStatistics.event.description
+        stickDays.text = String(eventStatistics.times)
+        durationDays.text = String(eventStatistics.duration)
+        cycleType.text = "天"
+        
+        let dayTimeFomatter = NSDateFormatter()
+        dayTimeFomatter.dateFormat = "h:m"
+        startTime.text = dayTimeFomatter.stringFromDate(eventStatistics.event.startTime!)
+        endTime.text = dayTimeFomatter.stringFromDate(eventStatistics.event.endTime!)
+        hasAlert.on = eventStatistics.event.needAlert
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -60,15 +52,26 @@ class EventDetailViewController: UIViewController, UICollectionViewDelegateFlowL
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return totalZhengCnt()
+    }
+    
+    func totalZhengCnt() -> Int{
+        return (Int(eventStatistics.times) + 4)/5
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ImageCell", forIndexPath: indexPath) as! UICollectionViewCell
-        let uiImage = cell.viewWithTag(100) as! UIImageView
+        
+        if (indexPath.item + 1 == totalZhengCnt()){
+            var uiImage = cell.viewWithTag(100) as! UIImageView
+            
+            let lastIndex = eventStatistics.times % 5
+            let imageName = String(lastIndex != 0 ? lastIndex : 5) + "_zheng.png"
+            uiImage.image = UIImage(named:imageName)
+        }
+        
         return cell
     }
-
 
     /*
     // MARK: - Navigation

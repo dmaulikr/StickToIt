@@ -281,9 +281,9 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="c3e-4n-8TA">
-                                <rect key="frame" x="67" y="457" width="286" height="158"/>
+                                <rect key="frame" x="44" y="457" width="286" height="158"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gmr-FZ-ngt">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="25" height="25"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -293,15 +293,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mark.icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="FBh-h5-2Q9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5_zheng.png" translatesAutoresizingMaskIntoConstraints="NO" id="FBh-h5-2Q9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <size key="customSize" width="25" height="25"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -419,6 +420,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="5_zheng.png" width="88" height="103"/>
         <image name="mark.icon.png" width="130" height="130"/>
         <image name="timer_icon.png" width="122" height="122"/>
     </resources>
