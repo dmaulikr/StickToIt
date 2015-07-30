@@ -25,6 +25,7 @@
 		496A75011B68B79600F01285 /* 4_zheng.png in Resources */ = {isa = PBXBuildFile; fileRef = 496A75001B68B79600F01285 /* 4_zheng.png */; };
 		49D60BB51B609BB50041AA22 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D60BB41B609BB50041AA22 /* EventDetailViewController.swift */; };
 		49F9D56A1B58A8890078458D /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9D5691B58A8890078458D /* AddEventViewController.swift */; };
+		49FBF59C1B69C131002C50EB /* EventEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FBF59B1B69C131002C50EB /* EventEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		496A75001B68B79600F01285 /* 4_zheng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_zheng.png; sourceTree = "<group>"; };
 		49D60BB41B609BB50041AA22 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		49F9D5691B58A8890078458D /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		49FBF59B1B69C131002C50EB /* EventEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				491B10CA1B5B484C00D0773E /* EventTableViewController.swift */,
 				491B10D21B5B5A3200D0773E /* EventStatisticsTableViewCell.swift */,
 				49D60BB41B609BB50041AA22 /* EventDetailViewController.swift */,
+				49FBF59B1B69C131002C50EB /* EventEditViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				491B10CB1B5B484C00D0773E /* EventTableViewController.swift in Sources */,
 				49D60BB51B609BB50041AA22 /* EventDetailViewController.swift in Sources */,
 				49F9D56A1B58A8890078458D /* AddEventViewController.swift in Sources */,
+				49FBF59C1B69C131002C50EB /* EventEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
