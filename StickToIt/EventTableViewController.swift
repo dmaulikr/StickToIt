@@ -27,9 +27,21 @@ class EventTableViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         tableView.reloadData()
     }
-
-    // MARK: - Table view data source
-
+    
+    func removeEventStatistics(eventStatistics:EventStatistics){
+        var toBeRemovedIndex:Int?
+        for index in 0...eventStatisticsList.count{
+            if eventStatisticsList[index] === eventStatistics{
+                toBeRemovedIndex = index
+                break
+            }
+        }
+        
+        if let unwrappedToBeRemovedIndex = toBeRemovedIndex{
+            eventStatisticsList.removeAtIndex(unwrappedToBeRemovedIndex)
+        }
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
@@ -83,7 +95,10 @@ class EventTableViewController: UITableViewController {
         if let unwrappedEventStatistics = eventStatistics {
             eventStatisticsList.append(unwrappedEventStatistics)
         }
-        tableView.reloadData()
+    }
+    
+    @IBAction func unwindFromDeleteEvent(sender: UIStoryboardSegue){
+        
     }
 
     /*

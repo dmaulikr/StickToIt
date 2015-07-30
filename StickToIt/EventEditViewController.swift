@@ -23,6 +23,7 @@ class EventEditViewController: UIViewController {
     
     @IBOutlet weak var needAlert: UISwitch!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,12 +45,16 @@ class EventEditViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let event = eventStatistics.event
-        event.name = eventName.text
-        event.description = eventDescription.text
-        event.startTime = startTime.date
-        event.endTime = endTime.date
-        event.needAlert = needAlert.on
+        if segue.destinationViewController is EventDetailViewController {
+            let event = eventStatistics.event
+            event.name = eventName.text
+            event.description = eventDescription.text
+            event.startTime = startTime.date
+            event.endTime = endTime.date
+            event.needAlert = needAlert.on
+        }else if segue.destinationViewController is EventTableViewController{
+            let eventTableViewController = segue.destinationViewController as! EventTableViewController
+            eventTableViewController.removeEventStatistics(eventStatistics)
+        }
     }
-
 }

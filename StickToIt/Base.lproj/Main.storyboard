@@ -214,7 +214,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="编辑事件" id="qTQ-b9-sdC">
-                        <barButtonItem key="leftBarButtonItem" title="删除" id="hq4-iW-sPq"/>
+                        <barButtonItem key="leftBarButtonItem" title="删除" id="hq4-iW-sPq">
+                            <connections>
+                                <segue destination="wuS-oc-HmO" kind="unwind" unwindAction="unwindFromDeleteEvent:" id="Bgm-M4-zTd"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="保存" id="MHM-R7-3di">
                             <connections>
                                 <segue destination="wuS-oc-HmO" kind="unwind" unwindAction="unwindFromEditEvent:" id="Jmu-bd-BGF"/>
