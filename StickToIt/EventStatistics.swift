@@ -12,7 +12,7 @@ class EventStatistics {
     
     var event:Event
     var startDate:NSDate?
-    var times:uint = 551
+    var times:uint = 54
     var checkedThisTime = false
     
     var duration:Int{
