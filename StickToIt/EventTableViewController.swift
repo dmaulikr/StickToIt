@@ -23,6 +23,10 @@ class EventTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
@@ -45,13 +49,8 @@ class EventTableViewController: UITableViewController {
         cell.eventName.text = cellData.event.name
         cell.times.text = String(cellData.times)
         
-        if cellData.event.needAlert {
-            cell.alertImage.hidden = false
-        }
-        
-        if cellData.checkedThisTime {
-            cell.checkedImage.hidden = false
-        }
+        cell.alertImage.hidden = !cellData.event.needAlert
+        cell.checkedImage.hidden = !cellData.checkedThisTime
         
         return cell
     }

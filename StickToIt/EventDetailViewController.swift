@@ -80,5 +80,9 @@ class EventDetailViewController: UIViewController, UICollectionViewDelegateFlowL
             eventEditViewController.eventStatistics = eventStatistics
         }
     }
+    
+    @IBAction func unwindFromEditEvent(sender: UIStoryboardSegue){
+       showEventStatisticsDetail()
+    }
 
 }

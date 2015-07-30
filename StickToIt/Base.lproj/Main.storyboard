@@ -215,7 +215,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="编辑事件" id="qTQ-b9-sdC">
                         <barButtonItem key="leftBarButtonItem" title="删除" id="hq4-iW-sPq"/>
-                        <barButtonItem key="rightBarButtonItem" title="保存" id="MHM-R7-3di"/>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="MHM-R7-3di">
+                            <connections>
+                                <segue destination="wuS-oc-HmO" kind="unwind" unwindAction="unwindFromEditEvent:" id="Jmu-bd-BGF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -229,6 +233,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iaO-PL-wHs" sceneMemberID="firstResponder"/>
+                <exit id="wuS-oc-HmO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2469.5" y="814.5"/>
         </scene>

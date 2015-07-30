@@ -42,14 +42,14 @@ class EventEditViewController: UIViewController {
         
         needAlert.on = eventStatistics.event.needAlert
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let event = eventStatistics.event
+        event.name = eventName.text
+        event.description = eventDescription.text
+        event.startTime = startTime.date
+        event.endTime = endTime.date
+        event.needAlert = needAlert.on
     }
-    */
 
 }
