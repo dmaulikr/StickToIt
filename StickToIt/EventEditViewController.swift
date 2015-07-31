@@ -33,7 +33,7 @@ class EventEditViewController: UIViewController {
 
     func initData(){
         eventName.text = event.name
-        eventDescription.text = event.description
+        eventDescription.text = event.eventDescription
         
         stickDays.text = String(event.times)
         durationDays.text = String(event.duration)
@@ -47,7 +47,7 @@ class EventEditViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.destinationViewController is EventDetailViewController {
             event.name = eventName.text
-            event.description = eventDescription.text
+            event.eventDescription = eventDescription.text
             event.startTime = startTime.date
             event.endTime = endTime.date
             event.needAlert = needAlert.on

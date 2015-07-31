@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import AVOSCloud
 
-class Event {
+class Event : AVObject, AVSubclassing {
     var name:String = ""
-    var description:String?
+    var eventDescription:String?
     var startTime:NSDate?
     var endTime:NSDate?
     var needAlert:Bool = false

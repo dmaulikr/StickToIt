@@ -92,9 +92,7 @@ class EventTableViewController: UITableViewController {
     }
     
     @IBAction func unwindFromAddEvent(sender: UIStoryboardSegue){
-        if let unwrappedevent = event {
-            eventList.append(unwrappedevent)
-        }
+        eventList.append(event)
     }
     
     @IBAction func unwindFromDeleteEvent(sender: UIStoryboardSegue){
@@ -135,7 +133,4 @@ class EventTableViewController: UITableViewController {
         return true
     }
     */
-
-    
-
 }

@@ -35,7 +35,7 @@ class EventDetailViewController: UIViewController, UICollectionViewDelegateFlowL
     
     func showeventDetail(){
         title = event.name
-        eventDescription.text = event.description
+        eventDescription.text = event.eventDescription
         stickDays.text = String(event.times)
         durationDays.text = String(event.duration)
         cycleType.text = "天"

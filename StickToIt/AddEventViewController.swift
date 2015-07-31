@@ -31,7 +31,7 @@ class AddEventViewController: UIViewController{
             let eventTableViewController = segue.destinationViewController as! EventTableViewController
             var event = Event()
             event.name = name.text
-            event.description = eventDescription.text
+            event.eventDescription = eventDescription.text
             event.startTime = startDatePicker.date
             event.endTime = endDatePicker.date
             event.needAlert = alertSwitch.on
