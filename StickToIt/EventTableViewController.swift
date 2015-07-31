@@ -10,8 +10,8 @@ import UIKit
 
 class EventTableViewController: UITableViewController {
 
-    var eventStatisticsList = [EventStatistics]()
-    var eventStatistics:EventStatistics?
+    var eventList = [Event]()
+    var event:Event!
 
     
     override func viewDidLoad() {
@@ -28,17 +28,17 @@ class EventTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    func removeEventStatistics(eventStatistics:EventStatistics){
+    func removeEvent(event:Event){
         var toBeRemovedIndex:Int?
-        for index in 0...eventStatisticsList.count{
-            if eventStatisticsList[index] === eventStatistics{
+        for index in 0...eventList.count{
+            if eventList[index] === event{
                 toBeRemovedIndex = index
                 break
             }
         }
         
         if let unwrappedToBeRemovedIndex = toBeRemovedIndex{
-            eventStatisticsList.removeAtIndex(unwrappedToBeRemovedIndex)
+            eventList.removeAtIndex(unwrappedToBeRemovedIndex)
         }
     }
     
@@ -51,24 +51,24 @@ class EventTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return eventStatisticsList.count
+        return eventList.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("eventCell", forIndexPath: indexPath) as! EventStatisticsTableViewCell
-        let cellData = eventStatisticsList[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("eventCell", forIndexPath: indexPath) as! EventTableViewCell
+        let cellData = eventList[indexPath.row]
         
-        cell.eventName.text = cellData.event.name
+        cell.eventName.text = cellData.name
         cell.times.text = String(cellData.times)
         
-        cell.alertImage.hidden = !cellData.event.needAlert
+        cell.alertImage.hidden = !cellData.needAlert
         cell.checkedImage.hidden = !cellData.checkedThisTime
         
         return cell
     }
     
     override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-       performSegueWithIdentifier("showDetail", sender: eventStatisticsList[indexPath.row])
+       performSegueWithIdentifier("showDetail", sender: eventList[indexPath.row])
     }
     
     // MARK: - Navigation
@@ -76,15 +76,15 @@ class EventTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "showDetail")
         {
-            let item = sender as! EventStatistics
+            let item = sender as! Event
             
             let eventDetailViewController = segue.destinationViewController as! EventDetailViewController
-            eventDetailViewController.eventStatistics = item
+            eventDetailViewController.event = item
         }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cellData = eventStatisticsList[indexPath.row]
+        let cellData = eventList[indexPath.row]
         cellData.times++
         cellData.checkedThisTime = true
         
@@ -92,8 +92,8 @@ class EventTableViewController: UITableViewController {
     }
     
     @IBAction func unwindFromAddEvent(sender: UIStoryboardSegue){
-        if let unwrappedEventStatistics = eventStatistics {
-            eventStatisticsList.append(unwrappedEventStatistics)
+        if let unwrappedevent = event {
+            eventList.append(unwrappedevent)
         }
     }
     

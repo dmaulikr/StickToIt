@@ -35,9 +35,9 @@ class AddEventViewController: UIViewController{
             event.startTime = startDatePicker.date
             event.endTime = endDatePicker.date
             event.needAlert = alertSwitch.on
+            event.startDate = NSDate()
             
-            var eventStatistics = EventStatistics(event:event, startDate:NSDate())
-            eventTableViewController.eventStatistics = eventStatistics
+            eventTableViewController.event = event
         }
     }
 

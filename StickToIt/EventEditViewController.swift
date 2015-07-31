@@ -10,7 +10,7 @@ import UIKit
 
 class EventEditViewController: UIViewController {
 
-    var eventStatistics:EventStatistics!
+    var event:Event!
     
     @IBOutlet weak var eventName: UITextField!
     @IBOutlet weak var eventDescription: UITextView!
@@ -32,21 +32,20 @@ class EventEditViewController: UIViewController {
     }
 
     func initData(){
-        eventName.text = eventStatistics.event.name
-        eventDescription.text = eventStatistics.event.description
+        eventName.text = event.name
+        eventDescription.text = event.description
         
-        stickDays.text = String(eventStatistics.times)
-        durationDays.text = String(eventStatistics.duration)
+        stickDays.text = String(event.times)
+        durationDays.text = String(event.duration)
         
-        startTime.date = eventStatistics.event.startTime!
-        endTime.date = eventStatistics.event.endTime!
+        startTime.date = event.startTime!
+        endTime.date = event.endTime!
         
-        needAlert.on = eventStatistics.event.needAlert
+        needAlert.on = event.needAlert
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.destinationViewController is EventDetailViewController {
-            let event = eventStatistics.event
             event.name = eventName.text
             event.description = eventDescription.text
             event.startTime = startTime.date
@@ -54,7 +53,7 @@ class EventEditViewController: UIViewController {
             event.needAlert = needAlert.on
         }else if segue.destinationViewController is EventTableViewController{
             let eventTableViewController = segue.destinationViewController as! EventTableViewController
-            eventTableViewController.removeEventStatistics(eventStatistics)
+            eventTableViewController.removeEvent(event)
         }
     }
 }

@@ -14,4 +14,18 @@ class Event {
     var startTime:NSDate?
     var endTime:NSDate?
     var needAlert:Bool = false
+    
+    var startDate:NSDate?
+    var times:uint = 52
+    var checkedThisTime = false
+    
+    var duration:Int{
+        get{
+            let cal = NSCalendar.currentCalendar()
+            let unit:NSCalendarUnit = NSCalendarUnit.CalendarUnitDay
+            let components = cal.components(unit, fromDate: startDate!, toDate: NSDate(), options: nil)
+            return components.day
+        }
+    }
+    
 }
