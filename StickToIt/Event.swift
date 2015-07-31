@@ -10,15 +10,23 @@ import Foundation
 import AVOSCloud
 
 class Event : AVObject, AVSubclassing {
-    var name:String = ""
-    var eventDescription:String?
-    var startTime:NSDate?
-    var endTime:NSDate?
-    var needAlert:Bool = false
+    @NSManaged var name:String
+    @NSManaged var eventDescription:String?
+    @NSManaged var startTime:NSDate?
+    @NSManaged var endTime:NSDate?
+    @NSManaged var needAlert:Bool
     
-    var startDate:NSDate?
-    var times:uint = 52
-    var checkedThisTime = false
+    @NSManaged var startDate:NSDate?
+    @NSManaged var times:uint
+    @NSManaged var checkedThisTime:Bool
+    
+    override init(){
+        super.init()
+        
+        self.needAlert = false
+        self.times = 52
+        self.checkedThisTime = false
+    }
     
     var duration:Int{
         get{
@@ -29,4 +37,7 @@ class Event : AVObject, AVSubclassing {
         }
     }
     
+    static func parseClassName() -> String! {
+        return "Event"
+    }
 }

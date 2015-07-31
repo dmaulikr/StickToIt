@@ -93,6 +93,7 @@ class EventTableViewController: UITableViewController {
     
     @IBAction func unwindFromAddEvent(sender: UIStoryboardSegue){
         eventList.append(event)
+        event.saveInBackground()
     }
     
     @IBAction func unwindFromDeleteEvent(sender: UIStoryboardSegue){

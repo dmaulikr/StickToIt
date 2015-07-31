@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StickToIt/EventTableViewController.swift"
-            timestampString = "460026458.07258"
+            timestampString = "460027517.648954"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "EventTableViewController"
             landmarkType = "3">
          </BreakpointContent>
